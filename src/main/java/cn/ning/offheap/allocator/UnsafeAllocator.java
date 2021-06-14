@@ -5,7 +5,7 @@ import sun.misc.Unsafe;
 import java.lang.reflect.Field;
 
 /**
- * @author 0h2o
+ * @author ningjie6
  * @date 2021/6/13
  **/
 public class UnsafeAllocator implements NativeMemoryAllocator {

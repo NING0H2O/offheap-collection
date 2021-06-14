@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45250f21-29bb-4cb0-924b-dbfbcea21ee5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ning/offheap/OffHeapArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ning/offheap/OffHeapLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ning/offheap/allocator/JNAMemoryAllocator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ning/offheap/allocator/NativeMemoryAllocator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ning/offheap/allocator/UnsafeAllocator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cn/ning/other/TestDirectMemoryLayout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cn/ning/other/TestJavaMemoryLayout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cn/ning/other/TestMemoryAccessPatterns.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ning/offheap/ElementSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ning/offheap/utils/MemoryUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cn/ning/offheap/OffHeapLinkedListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cn/ning/offheap/allocator/UnsafeAllocatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ning/offheap/OffHeapLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ning/offheap/OffHeapLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ning/offheap/allocator/JNAMemoryAllocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ning/offheap/allocator/JNAMemoryAllocator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ning/offheap/allocator/NativeMemoryAllocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ning/offheap/allocator/NativeMemoryAllocator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ning/offheap/allocator/UnsafeAllocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ning/offheap/allocator/UnsafeAllocator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +51,10 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MTHome" />
   </component>
-  <component name="RunManager" selected="Application.JNAMemoryAllocator">
+  <component name="RunManager" selected="JUnit.OffHeapLinkedListTest.testRemove">
     <configuration name="ArrayTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ning.other.ArrayTest" />
       <module name="offheap-collection" />
@@ -72,7 +73,7 @@
       <module name="offheap-collection" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.ning.offheap.allocator.*" />
+          <option name="PATTERN" value="cn.ning.offheap.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,13 +124,63 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OffHeapLinkedListTest.testAddAndGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="offheap-collection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.ning.offheap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.ning.offheap" />
+      <option name="MAIN_CLASS_NAME" value="cn.ning.offheap.OffHeapLinkedListTest" />
+      <option name="METHOD_NAME" value="testAddAndGet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OffHeapLinkedListTest.testRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="offheap-collection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.ning.offheap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.ning.offheap" />
+      <option name="MAIN_CLASS_NAME" value="cn.ning.offheap.OffHeapLinkedListTest" />
+      <option name="METHOD_NAME" value="testRemove" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UnsafeAllocatorTest.putMemory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="offheap-collection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.ning.offheap.allocator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.ning.offheap.allocator" />
+      <option name="MAIN_CLASS_NAME" value="cn.ning.offheap.allocator.UnsafeAllocatorTest" />
+      <option name="METHOD_NAME" value="putMemory" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -140,9 +191,15 @@
       <item itemvalue="Application.TestDirectMemoryLayout" />
       <item itemvalue="Application.ArrayTest" />
       <item itemvalue="Application.JNAMemoryAllocator" />
+      <item itemvalue="JUnit.OffHeapLinkedListTest.testAddAndGet" />
+      <item itemvalue="JUnit.UnsafeAllocatorTest.putMemory" />
+      <item itemvalue="JUnit.OffHeapLinkedListTest.testRemove" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OffHeapLinkedListTest.testRemove" />
+        <item itemvalue="JUnit.UnsafeAllocatorTest.putMemory" />
+        <item itemvalue="JUnit.OffHeapLinkedListTest.testAddAndGet" />
         <item itemvalue="Application.JNAMemoryAllocator" />
         <item itemvalue="Application.ArrayTest" />
       </list>
@@ -158,7 +215,8 @@
       <updated>1623553743201</updated>
       <workItem from="1623553747479" duration="6564000" />
       <workItem from="1623572639651" duration="220000" />
-      <workItem from="1623572878009" duration="4436000" />
+      <workItem from="1623572878009" duration="22765000" />
+      <workItem from="1623664893972" duration="3492000" />
     </task>
     <servers />
   </component>

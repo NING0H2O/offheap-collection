@@ -20,8 +20,8 @@ public class JNAMemoryAllocator implements NativeMemoryAllocator{
     }
 
     @Override
-    public void free(long peer) {
-        Native.free(peer);
+    public void free(long address) {
+        Native.free(address);
     }
 
     @Override

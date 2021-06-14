@@ -8,7 +8,7 @@ public interface NativeMemoryAllocator {
 
     long allocate(long size);
 
-    void free(long peer);
+    void free(long address);
 
     long getTotalAllocated();
 }
